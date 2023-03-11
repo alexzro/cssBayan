@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(200 253 238);
+  font-size: 10px;
+  
+}
+
+.css-bayan {
+  margin: 0;
+  width: 700px;
+  height: auto;
+  text-align: center;
+
+
+}
+.css-bayan-title {
+  text-align: left;
+  font-size: 3em;
+}
+.state {
+  background: url(../img/plus-solid.svg) no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 15px;
+  top: 20px;  
+}
+
+input:checked ~ .state {
+  background-image: url(../img/minus-solid.svg);
+}
+
+
+.css-bayan__item {
+  position: relative;
+  background: #06ffb9;
+  border-bottom: solid 2px grey;
+
+}
+
+img {  
+  overflow: hidden;
+  height: 0;
+}
+input {
+  display: none;
+}
+label {
+  text-align: left;
+  font-size: 2.5em;
+  display: block;
+  padding: 15px 2px 5px 15px;
+  cursor: pointer;
+
+
+}
+
+input:checked ~ img {
+  height: 50%;
+  width: 60%;
+  margin: 15px;
+}
