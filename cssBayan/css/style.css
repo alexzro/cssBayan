@@ -28,18 +28,21 @@ body {
 }
 
 .state {
+  display: inline-block;
   background: url(../img/plus-solid.svg) no-repeat;
   width: 2rem; 
   height: 0;
-  position: absolute;
+  /* position: absolute;
   right: 1.5rem;
-  top: 2rem;  
+  top: 2rem;   */
 }
 
 .css-bayan:hover input:checked ~ .state, .css-bayan__item:hover .state {
-  background-image: url(../img/minus-solid.svg);
+  /* background-image: url(../img/minus-solid.svg); */
+  transform: rotate(45deg);
   height: 2rem;
 }
+
 .css-bayan:hover label:not(input:checked+label) {
   color:rgb(114, 114, 114);
   transition: all .8s ease-out;
@@ -51,6 +54,7 @@ body {
   border-bottom: solid .2rem grey;
   cursor: pointer;
 }
+
 .css-bayan:hover .state {
   height: 2rem;
   transition: all .8s ease-out .2s;
@@ -70,8 +74,10 @@ input {
 label {
   text-align: left;
   font-size: 2.5em;
-  display: block;
-  padding: 1.5rem .2rem .5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem .8rem .5rem 1.5rem;
   cursor: pointer;
   z-index: 1;
 }
@@ -98,8 +104,7 @@ input:checked ~ img, .css-bayan__item:hover img{
   text-align: left;
   font-size: 3em;
   }
-  .state {    
-    
+  .state {       
     right: 1.2rem;
     top: 1.8rem;  
   }
@@ -120,7 +125,6 @@ input:checked ~ img, .css-bayan__item:hover img{
     width: 1.5rem;
     right: 1.0rem;
     top: 1.5rem;  
-  }
-  
+  }  
 
 }
