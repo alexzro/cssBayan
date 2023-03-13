@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-* {
-  padding: 0;
-  margin: 0;
+
+html {
+  width:100vw;
+  overflow-x:hidden;
+  font-size: 10px;
 }
 body {
   height: auto;
@@ -11,62 +13,115 @@ body {
   justify-content: center;
   font-family: 'Poppins', sans-serif;
   background-color: rgb(200 253 238);
-  font-size: 10px;
-  
 }
 
 .css-bayan {
   margin: 0;
-  width: 700px;
+  width: 70rem;
   height: auto;
   text-align: center;
-
-
 }
+
 .css-bayan-title {
   text-align: left;
   font-size: 3em;
 }
+
 .state {
+  display: inline-block;
   background: url(../img/plus-solid.svg) no-repeat;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 15px;
-  top: 20px;  
+  width: 2rem; 
+  height: 0;
 }
 
-input:checked ~ .state {
-  background-image: url(../img/minus-solid.svg);
+.css-bayan:hover input:checked ~ .state, .css-bayan__item:hover .state {
+  transform: rotate(45deg);
+  height: 2rem;
 }
 
+.css-bayan:hover label:not(input:checked+label) {
+  color:rgb(114, 114, 114);
+  transition: all .8s ease-out;
+}
 
 .css-bayan__item {
   position: relative;
   background: #06ffb9;
-  border-bottom: solid 2px grey;
+  border-bottom: solid .2rem grey;
+  cursor: pointer;
+}
 
+.css-bayan:hover .state {
+  height: 2rem;
+  transition: all .8s ease-out .2s;
 }
 
 img {  
+  transition: all .8s ease-out .2s;
   overflow: hidden;
   height: 0;
+  opacity: 0;
 }
+
 input {
   display: none;
 }
+
 label {
   text-align: left;
   font-size: 2.5em;
-  display: block;
-  padding: 15px 2px 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem .8rem .5rem 1.5rem;
   cursor: pointer;
-
-
+  z-index: 1;
 }
 
-input:checked ~ img {
-  height: 50%;
+input:checked ~ img, .css-bayan__item:hover img{
+  opacity: 1;
+  height: auto;
+  transition: all .8s ease-out;
   width: 60%;
-  margin: 15px;
+  margin: 1.5rem;
+}
+
+@media screen and (max-width: 820px){
+  .css-bayan {
+       width: 90%;   
+  }
+  label {
+    font-size: 2rem;
+  }
+  .css-bayan-title {
+    font-size: 2.5em;
+  }
+  .css-bayan-title {
+  text-align: left;
+  font-size: 3em;
+  }
+  .state {   
+    height: 2rem;    
+    right: 1.2rem;
+    top: 1.8rem;  
+  }
+
+}
+@media screen and (max-width: 425px){
+  label {
+    font-size: 1.5rem;
+  }
+  .css-bayan-title {
+    font-size: 2.2em;
+  }
+  .css-bayan-title {
+  text-align: left;
+  font-size: 3em;
+  }
+  .state {    
+    width: 1.5rem;
+    right: 1.0rem;
+    top: 1.5rem;  
+  }  
+
 }
