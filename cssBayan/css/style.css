@@ -32,13 +32,9 @@ body {
   background: url(../img/plus-solid.svg) no-repeat;
   width: 2rem; 
   height: 0;
-  /* position: absolute;
-  right: 1.5rem;
-  top: 2rem;   */
 }
 
 .css-bayan:hover input:checked ~ .state, .css-bayan__item:hover .state {
-  /* background-image: url(../img/minus-solid.svg); */
   transform: rotate(45deg);
   height: 2rem;
 }
@@ -104,7 +100,8 @@ input:checked ~ img, .css-bayan__item:hover img{
   text-align: left;
   font-size: 3em;
   }
-  .state {       
+  .state {   
+    height: 2rem;    
     right: 1.2rem;
     top: 1.8rem;  
   }
