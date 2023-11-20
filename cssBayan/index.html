@@ -12,37 +12,45 @@
 <body>
    <div class="css-bayan">
     <h1 class="css-bayan-title">Css Bayan</h1>
-    <div class="css-bayan__item">      
-      <input id="mem1"type="checkbox" checked>
-      <label for="mem1">When need to create animaiton</label>
+    <div class="css-bayan__item">
+      <input id="mem1" type="checkbox" checked>
+      <label for="mem1">When need to create animaiton <span class="state"></span></label>
       <img src="img/mem0.jpg" alt="">
-      <div class="state"></div>
     </div>
     <div class="css-bayan__item">
-      <input id="mem2"type="checkbox">
-      <label for="mem2">Recursion</label>
+      <input id="mem2" type="checkbox">
+      <label for="mem2">Casual recursion <span class="state"></span></label>
       <img src="img/mem1.jpg" alt="">
-      <div class="state"></div>
     </div>
     <div class="css-bayan__item">
-      <input id="mem3"type="checkbox">
-      <label for="mem3">When first write "Hello, world!"</label>
+      <input id="mem3" type="checkbox">
+      <label for="mem3">When first write "Hello, world!" <span class="state"></span></label>
       <img src="img/mem2.jpg" alt="">
-      <div class="state"></div>
     </div>
     <div class="css-bayan__item">
-      <input id="mem4"type="checkbox">
-      <label for="mem4">Process of choosing framework</label>
+      <input id="mem4" type="checkbox">
+      <label for="mem4">Process of choosing framework <span class="state"></span></label>
       <img src="img/mem3.jpg" alt="">
-      <div class="state"></div>
     </div>
     <div class="css-bayan__item">
-      <input id="mem5"type="checkbox">
-      <label for="mem5">Difficult choice</label>
+      <input id="mem5" type="checkbox">
+      <label for="mem5">Difficult choice <span class="state"></span></label>
       <img src="img/mem4.jpg" alt="">
-      <div class="state"></div>
     </div>
   </div>
-  
+  <div id="oki-toki-web-call"></div>
+                            <script src="https://comp3343.oki-toki.net/js/webcall/oki-toki.iife.js"></script>
+                            <script>
+                                okiToki.createWebCall({
+                                    target: '#oki-toki-web-call',
+                                    messages: {"call":"Позвонить нам","calling":"Соединение","end":"Разговор завершен","unsupprted":"Ваш браузер не поддерживает веб-сокеты HTML5."},
+                                    colors: {"call":"#ff24f8","call-hover":"#ff00c8","call-text":"#ffffff","calling":"#f692f3","calling-hover":"#ff00c8","calling-text":"#ffffff","talking":"#42a5f5","talking-hover":"#2196f3","talking-text":"#ffffff","end":"#9ccc65","end-hover":"#7cb342","end-text":"#ffffff"},
+                                    buttonType: "floating",
+                                    server: "wss://lvp1-de.oki-toki.net:4014",
+                                    login: "webcall_ZxD0AH27",
+                                    dnis: "1febde5a358c777b89a9f91cf7e2f6f1",
+                                });
+                            </script>
+
 </body>
 </html>
